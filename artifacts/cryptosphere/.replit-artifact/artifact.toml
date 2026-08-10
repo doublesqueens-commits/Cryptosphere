@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Cryptosphere"
+description = "A premium institutional landing page for Cryptosphere Solutions Inc., focused on corporate transparency, compliance verification, and secure digital asset infrastructure."
+version = "1.0.0"
+id = "artifacts/cryptosphere"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25168
+
+[services.development]
+run = "pnpm --filter @workspace/cryptosphere run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/cryptosphere", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/cryptosphere/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25168"
+BASE_PATH = "/"

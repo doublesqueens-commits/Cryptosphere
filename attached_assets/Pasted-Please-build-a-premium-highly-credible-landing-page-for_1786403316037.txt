@@ -1,0 +1,22 @@
+Please build a premium, highly credible landing page for a Web3/Crypto enterprise named "Cryptosphere". 
+
+The core purpose of this landing page is informational compliance and building extreme trust with our users, ensuring that when people verify our details, it shows 100% authenticity. 
+
+Requirements:
+1. Design Style: Institutional-grade, modern, and highly secure look (similar to Stripe or Coinbase Prime). Use a dark theme with deep slate grays, dark blues, and vibrant cyan/electric blue accents. Fully responsive for mobile and desktop.
+
+2. Structure & Sections:
+- Premium Navigation Bar with Logo and a highlighted "Telegram Support" button.
+- Hero Section: Strong corporate headline emphasizing compliance, trust, and secure infrastructure.
+- Corporate Transparency Section: This is the most crucial part. Display the following verification cards clearly with clean typography:
+  * US Entity Registration: Legal Name: Cryptosphere Solutions Inc. | State of Inc: Delaware, USA | Filing Number: 7654321. Add a functional link button pointing to the Delaware Division of Corporations search registry.
+  * FinCEN MSB License: Authority: US Bureau of FinCEN | Registration Type: Money Services Business (MSB) | MSB Number: 31000123456789. Add a functional link button pointing to the official FinCEN MSB search tool.
+- Professional Footer: Include our legal name, registered address (1209 North Orange Street, Wilmington, DE 19801), copyright 2026, and a strict legal risk warning/disclaimer regarding digital assets.
+
+3. Google SEO Schema Markup: 
+Inside the HTML <head>, inject a valid JSON-LD Organization Schema markup including the `GovernmentPermit` type for the FinCEN MSB permit, so that Google Search can crawl and index our business entity accurately without any mismatch errors.
+
+4. Telegram Integration:
+Implement a modern, floating Telegram contact button at the bottom-right corner of the screen using FontAwesome icons. This floating button, along with ALL other Telegram CTA buttons in the Hero section and Navbar, MUST link directly to our official support channel: "https://t.me/cryptoshperehelp". When clicked, it must open the link in a new tab.
+
+Please write the complete production-ready HTML, CSS (Tailwind CSS via CDN), and JS inside the 'index.html' file.
