@@ -5,7 +5,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
-const TELEGRAM_URL = 'https://t.me/cryptoshperehelp';
+const TELEGRAM_URL = 'https://t.me';
 
 function TelegramLink({ children, className = '', floating = false }: { children: React.ReactNode; className?: string; floating?: boolean }) {
   return (
@@ -28,7 +28,7 @@ function Brand() {
   return (
     <a href="#top" className="brand" data-testid="link-brand">
       <span className="brand-mark" aria-hidden="true" />
-      <span className="brand-name">Cryptosphere<span className="brand-suffix">/ SOLUTIONS INC.</span></span>
+      <span className="brand-name">Cryptosphere<span className="brand-suffix">/ INC.</span></span>
     </a>
   );
 }
@@ -67,7 +67,7 @@ function Hero() {
           <div className="reveal">
             <div className="eyebrow"><span className="eyebrow-line" /> Institutional digital-asset infrastructure</div>
             <h1>Trust is not a<br /><span className="accent">feature.</span> It is the<br />foundation.</h1>
-            <p className="hero-copy">Cryptosphere Solutions Inc. builds secure, compliance-first infrastructure for the digital-asset economy — engineered for institutions that operate where accountability matters.</p>
+            <p className="hero-copy">Cryptosphere Inc. builds secure, compliance-first infrastructure for the digital-asset economy — engineered for institutions that operate where accountability matters.</p>
             <div className="hero-actions">
               <TelegramLink>Connect with support <ArrowUpRight size={15} /></TelegramLink>
               <a className="secondary-link" href="#transparency" data-testid="link-verify-records">Verify our records <ArrowDownRight size={14} /></a>
@@ -82,7 +82,7 @@ function Hero() {
               </div>
               <div className="console-readout">
                 <div className="readout-label">Organization status</div>
-                <div className="readout-value">Cryptosphere Solutions Inc. <span className="verified-badge"><Check size={12} /> Verified</span></div>
+                <div className="readout-value">Cryptosphere Inc. <span className="verified-badge"><Check size={12} /> Verified</span></div>
               </div>
               <div className="console-rows">
                 <div className="console-row"><span>Jurisdiction</span><span>Delaware, USA</span></div>
@@ -110,7 +110,7 @@ function Hero() {
 function Infrastructure() {
   return (
     <section className="section" id="infrastructure">
-      <div className="section-inner">
+          <div className="section-inner">
         <div className="section-header">
           <div><div className="section-kicker">01 / Infrastructure</div><h2 className="section-title">Built for the scrutiny that comes with moving real value.</h2></div>
           <p className="section-intro">The digital-asset market needs less noise and more verifiable structure. Our posture starts with the basics: clear records, secure systems, and operational discipline.</p>
@@ -139,18 +139,21 @@ function RecordCard({ fincen = false }: { fincen?: boolean }) {
         <span className="record-icon">{fincen ? <FileCheck2 /> : <Network />}</span>
         <span className="record-type">{fincen ? 'Federal registration' : 'State registration'}</span>
       </div>
-      <h3>{fincen ? 'FinCEN MSB License' : 'US Entity Registration'}</h3>
+      <h3>{fincen ? 'FinCEN MSB Registration' : 'US Entity Registration'}</h3>
       {fincen ? (
         <dl className="record-fields">
           <div className="record-field"><dt>Authority</dt><dd>US Bureau of FinCEN</dd></div>
           <div className="record-field"><dt>Registration type</dt><dd>Money Services Business (MSB)</dd></div>
-          <div className="record-field"><dt>MSB number</dt><dd className="mono">31000123456789</dd></div>
+           <div className="record-field"><dt>Legal name</dt><dd>CRYPTOSPHERE INC.</dd></div>
+           <div className="record-field"><dt>MSB registration number</dt><dd className="mono">31000155255462</dd></div>
+           <div className="record-field"><dt>Registration status</dt><dd>Active / Verifiable</dd></div>
+           <div className="record-field"><dt>Street address</dt><dd>2140 South Dupont Highway<br />Camden, DE 19934</dd></div>
         </dl>
       ) : (
         <dl className="record-fields">
-          <div className="record-field"><dt>Legal name</dt><dd>Cryptosphere Solutions Inc.</dd></div>
+           <div className="record-field"><dt>Legal name</dt><dd>Cryptosphere Inc.</dd></div>
           <div className="record-field"><dt>State of Inc</dt><dd>Delaware, USA</dd></div>
-          <div className="record-field"><dt>Filing number</dt><dd className="mono">7654321</dd></div>
+           <div className="record-field"><dt>Filing number</dt><dd className="mono">4323282</dd></div>
         </dl>
       )}
       <a className="verify-link" href={fincen ? 'https://www.fincen.gov/msb-registrant-search' : 'https://icis.corp.delaware.gov/Ecorp/EntitySearch/NameSearch.aspx'} target="_blank" rel="noreferrer" data-testid={`link-verify-${fincen ? 'fincen' : 'delaware'}`}>
@@ -211,13 +214,13 @@ function Footer() {
           <div className="footer-main">
             <div><Brand /><p className="footer-brand-copy">Secure, compliance-first infrastructure for the digital-asset economy.</p></div>
             <div className="footer-meta">
-              <div><span className="footer-label">Legal entity</span><span className="footer-value">Cryptosphere Solutions Inc.</span></div>
-              <div><span className="footer-label">Registered address</span><span className="footer-value">1209 North Orange Street<br />Wilmington, DE 19801</span></div>
+               <div><span className="footer-label">Legal entity</span><span className="footer-value">Cryptosphere Inc.</span></div>
+               <div><span className="footer-label">Registered address</span><span className="footer-value">2140 South Dupont Highway<br />Camden, DE 19934</span></div>
             </div>
           </div>
           <div className="footer-bottom">
             <span className="footer-risk">Digital assets involve substantial risk, including the potential loss of principal. Nothing on this site constitutes financial, investment, legal, or tax advice. Users should conduct their own due diligence and consult qualified professionals before making any decision.</span>
-            <span className="footer-copyright">© 2026 Cryptosphere Solutions Inc.</span>
+             <span className="footer-copyright">© 2026 Cryptosphere Inc.</span>
           </div>
         </div>
       </footer>
